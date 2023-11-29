@@ -31,14 +31,14 @@ int main(int argc, char* argv[])
 		SDL_PollEvent(&event);
 
 		// dots
-		//canvas.Clear({ 0, 0, 0, 1 });
-		//for (int i = 0; i < 1000; i++) canvas.DrawPoint({random(0,400), random(0,300)}, {random01(), random01(), random01(), 1});
-		//canvas.Update();
+		canvas.Clear({ 0, 0, 0, 1 });
+		for (int i = 0; i < 1000; i++) canvas.DrawPoint({random(0,400), random(0,300)}, {random01(), random01(), random01(), 1});
+		canvas.Update();
 
 		// gradient
-		canvas.Clear({ 0, 0, 0, 1 });
-		scene.Render(canvas);
-		canvas.Update();
+		//canvas.Clear({ 0, 0, 0, 1 });
+		//scene.Render(canvas);
+		//canvas.Update();
 
 		renderer.PresentCanvas(canvas);
 

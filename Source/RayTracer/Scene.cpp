@@ -13,16 +13,16 @@ void Scene::Render(Canvas& canvas)
 			// create vec2 pixel from canvas x,y
 			glm::vec2 pixel = { x, y };
 				// get normalized (0 - 1) point coordinates from pixel
-			glm::vec2 point = pixel / canvas.GetSize();
+			//glm::vec2 point = pixel / canvas.GetSize();
 				// flip y
-				point.y = 1.0f - point.y;
+			//point.y = 1.0f - point.y;
 
 			// create ray from camera
-				ray_t ray = m_camera->GetRay(point);
+			//ray_t ray = m_camera->GetRay(point);
 
 					// cast ray into scene
 					// set color value from trace
-					color3_t color = Trace(ray);
+			color3_t color = Trace(ray);
 
 			// draw color to canvas point (pixel)
 			canvas.DrawPoint(pixel, color4_t(color, 1));
